@@ -4,16 +4,25 @@ const router = express.Router()
 
 router.get('', async (req, res) => {
     try {
+        const tags = [
+            'motivational',
+            'music',
+            'patience',
+            'peace',
+            'attitude',
+            'general',
+        ]
+
         const api = `${process.env.API_URL}/random/1`
         const response = await axios(api, {
             params: {
                 type: 'tag',
-                val: 'motivational',
+                val: tags[Math.floor(Math.random() * tags.length)],
             },
         })
         res.render('index', response.data)
-    } catch (error) {
-        console.log(error.message)
+    } catch ({ message }) {
+        res.json({ message })
     }
 })
 

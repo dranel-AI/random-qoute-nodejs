@@ -13,7 +13,8 @@
 </head>
 <body>
     <div class="container">
-        <% const { text, author } = quotes[0]%>
+        <% const { text, author, tag } = quotes[0]%>
+        <b><u><%= tag %></u></b>
         <h2><q><%= text %></q></h2>
         <small>- <%= author %></small>
     </div>
