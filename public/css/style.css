@@ -1,0 +1,14 @@
+body {
+    background: #efefef;
+    font-family: 'Patrick Hand', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 400px;
+    font-size: 1em;
+}
